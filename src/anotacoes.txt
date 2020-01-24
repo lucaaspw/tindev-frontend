@@ -1,0 +1,55 @@
+Anotações React
+_______________________________________________________________________________________
+
+Conceitos Básicos
+_______________________________________________________________________________________
+
+> "hello".charAt(0)
+h
+> "hello, world".replace("hello", "goodbye")
+goodbye, world
+> "hello".toUpperCase()
+HELLO
+
+
+
+
+
+
+
+react-dom é a versão do react que lida com a DOM que é a nossa árvore de elementos.
+o que a gente ta fazendo é básicamente renderizando alguma coisa no elemento com id 'root'
+ReactDOM.render(<App />, document.getElementById('root')); 
+
+sempre usamos o ReactDOM.render para renderizar um componete principal da nossa aplicação
+<App /> isso é um componente.
+
+por padrão um componete é uma função que retorna uma conteúdo
+dentro da pasta pages vai estar todos os componentes.
+Aqui no react e recomendavel utilizar o className ao invés do class, pois o class é uma palavra reservada do react
+usamos a biblioteca react-router-dom para árvored de elementos do html
+
+o cara abaixo serve para fazer a nossa rota
+<BrowserRouter>
+            <Route path="/" component={Login} />  
+            <Route path="/main" component={Main} />        
+</BrowserRouter>
+
+export default function Main() = usamos esse cara aqui, para assim que a função for criada ele já exporta
+ele seria a mesma coisa que passar assim no final do código export defaut um nome qualque;
+
+ <Route path="/" exact component={Login} /> 
+ o exact usado a cima serve para fazer uma comparção de exatidão, se a rota é exatamente igual
+
+componete é praticamente uma função que isola um pedaço da nossa aplicação que retorna o html.
+state
+propriedade que são as propriedades dos elementos html
+base do react "Componente", "Estado", "propriedade".
+todos os componetes que são rotas herdam uma propriedade chamada "history" e esse cara serve para fazer a navegação
+exemplo: temos duas rotas, uma "login" e outra "main", se eu jogar o history dentro da função login chamando a rota main 
+"history.push('/main');" ele vai me direcionar para a pagina de rota main.
+match = é uma propriedade do react que pega todos os parametros passado naquela rotaai para pegar vc usa {match.params."aqui  vai o nome do parametro que vc passou na rota e deseja acessar"}
+
+useEffect() ela recebe dois parametros, uma função arrouw function que deseja executar e outro q é quando vc deseja executar.
+
+
